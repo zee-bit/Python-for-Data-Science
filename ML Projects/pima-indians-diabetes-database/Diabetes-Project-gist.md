@@ -63,6 +63,7 @@ dtypes: float64(2), int64(7)
 we wanted to get some serious insights into our data so we chose to visualise them :)
 
 </br>
+
 ```
 fig, ax = plt.subplots(4,2, figsize=(16,16))
 sns.distplot(df.Age, bins = 20, ax=ax[0,0]) 
@@ -74,6 +75,7 @@ sns.distplot(df.Insulin, bins = 20, ax=ax[2,1])
 sns.distplot(df.DiabetesPedigreeFunction, bins = 20, ax=ax[3,0]) 
 sns.distplot(df.BMI, bins = 20, ax=ax[3,1])
 ```
+
 </br>
 </br>
 WE ALSO CREATED A CORRELATION PLOT TO DETERMINE WHICH FEATURES WERE BETTER FOR OUR USE
@@ -110,14 +112,17 @@ Accuracy: 76.33587786259542%
 </br>
 NEXT WE APPLIED LOGISTIC REGRESSION :-
 </br>
-```
+
+````
 logisticRegr.fit(x_train, y_train)
 y_pred = logisticRegr.predict(x_test)
 check=pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
 check.head(10)
-```
+````
+</br>
 WE CHECKED OUR ACCURACY NEXT :
 </br>
+
 ```
 check=pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
 check.head(10)
