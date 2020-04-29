@@ -122,6 +122,7 @@ Accuracy: 95.83333333333334 %
 </br>
 FINALLY WE USED KNN FROM SCIKIT LEARN 
 </br>
+
 ```
 from sklearn.neighbors import KNeighborsClassifier
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.03, random_state=0) //TT RATIO 97:3
