@@ -1,4 +1,4 @@
-# PROJECT:- Prediction of diabetes in Indian patients:
+># PROJECT:- Prediction of diabetes in Indian patients:
 Project Members :Zeeshan Equbal , Abhraneil Bhattacharya, Shivam Kumar Tiwary , Pratyay Das  
 Project Description : Our project was to deploy ML algorithms such as Naive Bayes classifer and Logistic Regression to 
 predict wether a person has diabetes or not.
@@ -13,7 +13,7 @@ The summary of our project is as follows :
 6. Data splitting and model selection.
 
 
-IMPORTING NECESSARY MODULES :-
+>##IMPORTING NECESSARY MODULES :-
 
 
 ```import numpy as np 
@@ -25,7 +25,7 @@ import seaborn as sns
 
 
 
-DATASET COLLECTION AND UPLOAD :
+>##DATASET COLLECTION AND UPLOAD :
 ```
 We used the pima-indian diabetes from kaggle 
 link:-  https://www.kaggle.com/uciml/pima-indians-diabetes-database/kernels
@@ -33,7 +33,7 @@ link:-  https://www.kaggle.com/uciml/pima-indians-diabetes-database/kernels
 
 
 
-DATA CLEANING:--</br>
+>##DATA CLEANING:--</br>
 Initially our dataset had no defined columns , just raw data:
 based on the kaggle websited we identified the columns and renamed them with the help of Pandas</br>
 ```
@@ -58,7 +58,7 @@ Data columns (total 9 columns):
 dtypes: float64(2), int64(7)
 ```
 
-SIMPLE VISUALISATIONS USING SEABORN:-
+>##SIMPLE VISUALISATIONS USING SEABORN:-
 </br>
 we wanted to get some serious insights into our data so we chose to visualise them :)
 </br>
@@ -98,7 +98,7 @@ def main():
 main()
 ```
 
-WE TESTED FOR OUR ACCURACY :-
+ACCURACY OF NAIVE BAYES:-
 </br>
 ```
 Split 768 rows into train = 637 and test = 131 rows
@@ -113,7 +113,11 @@ logisticRegr.fit(x_train, y_train)
 y_pred = logisticRegr.predict(x_test)
 check=pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
 check.head(10)
+```
+</br>
 WE CHECKED OUR ACCURACY NEXT :
+</br>
+```
 check=pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
 check.head(10)
 
@@ -129,7 +133,9 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.03, random
 y_pred=neigh.predict(x_test)
 check=pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
 check.head(10)
+```
 LASTLY WE CHECKED THE ACCURACY OF OUR LAST ALGORITHM
+```
 score = logisticRegr.score(x_test, y_test)
 print('Accuracy: {} %'.format(score*100.0))
 
